@@ -4,8 +4,10 @@ import User from '../components/User';
 import styled from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
 
-const StyledUsers = styled.div`
-    
+const StyledUsersContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 `;
 
 const Users = () => {
@@ -14,13 +16,13 @@ const Users = () => {
     //console.log(usersData);
 
     return (
-        <div className="users-container">
+        <StyledUsersContainer className="users-container">
             {
                 usersData.map((data) => {
                     return <User data={data} key={uuidv4()} />
                 })
             }
-        </div>
+        </StyledUsersContainer>
     )
 }
 
