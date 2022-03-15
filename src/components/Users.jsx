@@ -4,12 +4,6 @@ import User from '../components/User';
 import styled from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
 
-const StyledUsersContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-`;
-
 const Users = () => {
 
     const usersData = useContext(randomUserContext);
@@ -25,5 +19,11 @@ const Users = () => {
         </StyledUsersContainer>
     )
 }
+
+const StyledUsersContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+`;
 
 export default Users;
