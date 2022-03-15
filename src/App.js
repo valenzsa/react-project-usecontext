@@ -5,7 +5,7 @@ import './App.css';
 
 function App() {
   // State
-  const [users, setUsers] = useState({});
+  const [users, setUsers] = useState([]);
 
   // Get users from api
   useEffect(() => {
