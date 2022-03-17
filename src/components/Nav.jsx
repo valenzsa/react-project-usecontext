@@ -14,14 +14,10 @@ const Nav = () => {
                         <li className="nav-item">
                             <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                         </li>
-                        <li class="nav-item">
+                        <li className="nav-item">
                             <Link className="nav-link" to="/users">Users</Link>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-success" type="submit">Search</button>
-                    </form>
                 </div>
             </div>
         </StyledNav>
