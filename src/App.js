@@ -11,9 +11,15 @@ function App() {
   useEffect(() => {
     (async () => {
       try {
-        const response = await fetch('https://random-data-api.com/api/users/random_user?size=3');
-        const userData = await response.json();
-        setUsers(userData);
+        const response = await fetch('https://random-data-api.com/api/users/random_user?size=3')
+          .then(function (res) {
+            console.log(res.text());
+            // if(res.ok) {
+            //   return response.text();
+            // }
+          });
+        // const userData = await response.json();
+        // setUsers(userData);
       }
       catch (error) {
         console.log(error);
