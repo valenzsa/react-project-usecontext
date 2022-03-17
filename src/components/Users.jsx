@@ -10,7 +10,7 @@ const Users = () => {
     //console.log(usersData);
 
     return (
-        <StyledUsersContainer className="users-container">
+        <StyledUsersContainer className="row mb-2">
             {
                 usersData.map((data) => {
                     return <User data={data} key={uuidv4()} />
@@ -21,9 +21,7 @@ const Users = () => {
 }
 
 const StyledUsersContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    
 `;
 
 export default Users;

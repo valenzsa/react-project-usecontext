@@ -24,7 +24,7 @@ function App() {
 
   return (
     <randomUserContext.Provider value={users}>
-      <div className="App">
+      <div className="container">
         <Users />
       </div>
     </randomUserContext.Provider>
