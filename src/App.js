@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react';
 import { randomUserContext } from './context/randomUserContext';
+import { Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
 import Users from './components/Users';
+import About from './components/About';
+import Nav from './components/Nav';
 import './App.css';
 
 function App() {
@@ -30,8 +34,16 @@ function App() {
 
   return (
     <randomUserContext.Provider value={users}>
-      <div className="App">
-        <Users />
+      <Nav />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+
+          <Route path="/users" element={<Users />} />
+
+          <Route path="/about" element={<About />} />
+
+        </Routes>
       </div>
     </randomUserContext.Provider>
   );
