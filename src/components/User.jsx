@@ -23,7 +23,7 @@ const User = ({ data }) => {
                         <li>{data.email}</li>
                     </ul>
                 </div>
-                <div className="col-auto d-none d-lg-block">
+                <div className="col-auto img-container">
                     <img className="img-fluid" src={data.avatar} />
                 </div>
             </div>
@@ -56,8 +56,12 @@ const StyledUser = styled.div`
                 font-size: 0.8rem;
             }
         }
-        img {
-            max-width: 150px;
+        .img-container {
+            display: flex;
+            align-items: end;
+            img {
+                max-width: 150px;
+            }
         }
     }
 `;
