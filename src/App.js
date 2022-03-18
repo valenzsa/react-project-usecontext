@@ -8,57 +8,37 @@ import Nav from './components/Nav';
 import './App.css';
 
 function App() {
-    // State
-    const [users, setUsers] = useState([]);
+  // State
+  const [users, setUsers] = useState([]);
 
-    // Get users from api
-    useEffect(() => {
-        (async() => {
-            try {
-                const response = await fetch('https://random-data-api.com/api/users/random_user?size=25');
-                // .then(function (res) {
-                //   console.log(res.text());
-                //   // if(res.ok) {
-                //   //   return response.text();
-                //   // }
-                // });
-                const userData = await response.json();
-                setUsers(userData);
-            } catch (error) {
-                console.log(error);
-            }
+  // Get users from api
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await fetch('https://random-data-api.com/api/users/random_user?size=25');
+        const userData = await response.json();
+        setUsers(userData);
+      } catch (error) {
+        console.log(error);
+      }
 
-        })();
-    }, []);
+    })();
+  }, []);
 
-    return ( <
-        randomUserContext.Provider value = { users } >
-        <
-        Nav / >
-        <
-        div className = "container" >
-        <
-        Routes >
-        <
-        Route path = "/"
-        element = { < Home / > }
-        />
+  return (
+    <randomUserContext.Provider value={users}>
+      <Nav />
 
-        <
-        Route path = "/users"
-        element = { < Users / > }
-        />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={< Home />} />
 
-        <
-        Route path = "/about"
-        element = { < About / > }
-        />
+          <Route path="/users" element={< Users />} />
 
-        <
-        /Routes> < /
-        div > <
-        /randomUserContext.Provider>
-    );
+        </Routes>
+      </div>
+    </randomUserContext.Provider>
+  );
 }
 
 export default App;
