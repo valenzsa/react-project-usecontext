@@ -12,10 +12,10 @@ const Nav = () => {
 
                     <ul className="nav col-12 col-lg-auto ms-lg-auto mb-2 justify-content-center mb-md-0">
                         <li>
-                            <Link to="/" className="nav-link active">Home</Link>
+                            <Link to="/" className="nav-link text-dark active">Home</Link>
                         </li>
                         <li>
-                            <Link to="/users" className="nav-link">Users</Link>
+                            <Link to="/users" className="nav-link text-dark">Users</Link>
                         </li>
                     </ul>
                 </div>
