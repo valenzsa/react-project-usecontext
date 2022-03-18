@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { randomUserContext } from './context/randomUserContext';
 import { Routes, Route } from 'react-router-dom';
+import Nav from './components/Nav';
 import Home from './components/Home';
 import Users from './components/Users';
 import About from './components/About';
-import Nav from './components/Nav';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
@@ -27,16 +28,19 @@ function App() {
 
   return (
     <randomUserContext.Provider value={users}>
-      <Nav />
+      <div className="content">
+        <Nav />
 
-      <div className="container">
-        <Routes>
-          <Route path="/" element={< Home />} />
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<Home />} />
 
-          <Route path="/users" element={< Users />} />
-
-        </Routes>
+            <Route path="/users" element={<Users />} />
+          </Routes>
+        </div>
       </div>
+
+      <Footer />
     </randomUserContext.Provider>
   );
 }

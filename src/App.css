@@ -1,3 +1,17 @@
+html, body {
+    height: 100%;
+}
 body {
     background: #e2e8f0 !important;
+}
+#root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    flex: 1 0 auto;
+}
+.footer {
+    flex-shrink: 0;
 }
