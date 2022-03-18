@@ -1,8 +1,95 @@
+@import url(https://fonts.googleapis.com/css2?family=Nunito:wght@400&family=Kanit:wght@700&family=Arvo&family=Montserrat:wght@400&family=Quattrocento&family=Rokkitt:wght@300&family=Bevan&family=Cabin+Sketch:wght@700&family=Permanent+Marker&family=Walter+Turncoat&display=swap);
+
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display: block
+}
+
+body {
+    line-height: 1
+}
+
+ol,ul {
+    list-style: none
+}
+
+blockquote,q {
+    quotes: none
+}
+
+blockquote:after,blockquote:before,q:after,q:before {
+    content: "";
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+:root {
+    --pink0: #e84393;
+    --green0: #5de294;
+    --blue0: #16bdca;
+    --purple0: #ac94fa;
+    --orange0: #ff8a4c;
+    --blue1: #76a9fa;
+    --green1: #31c48d;
+    --pink1: #f17eb8;
+    --peach0: #f98080;
+    --orange1: #e3a008;
+    --gray-00-light: #dfdfdf;
+    --gray-01-dark: #202124;
+    --gray-04-medium: #27282b;
+    --gray-06-dark-2: #1a1a1e;
+    --gray-02-medium-light: #ededed;
+    --gray-03-light-2: #f7f7f7;
+    --gray-07-middle: #7f7f7f;
+    --header-font-00: "Bevan";
+    --header-font-01: "Kanit";
+    --header-font-02: "Permanent Marker";
+    --header-font-03: "Walter Turncoat";
+    --header-font-04: "Cabin Sketch";
+    --body-font-00: "Quattrocento";
+    --body-font-01: "Nunito";
+    --body-font-02: "Arvo";
+    --body-font-03: "Montserrat";
+    --body-font-04: "Rokkitt"
+}
+
+::-moz-selection {
+    color: #ff0;
+    background-color: #f0f
+}
+
+::selection {
+    color: #ff0;
+    background-color: #f0f
+}
 html, body {
     height: 100%;
 }
 body {
-    background: #e2e8f0 !important;
+    background: var(--gray-01-dark) !important;
+}
+h1 {
+    color: var(--gray-00-light);
+    font-family: var(--header-font-01);
+    margin: 5px;
+    font-size: 50px;
 }
 #root {
     height: 100%;

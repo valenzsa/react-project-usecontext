@@ -33,12 +33,26 @@ const User = ({ data }) => {
 
 const StyledUser = styled.div`
     .card {
-        background: #fff;
+        background: var(--gray-06-dark-2);
+        border: 1px solid var(--blue0) !important;
+        &:hover {
+            background: var(--blue0);
+            h3 {
+                color: var(--gray-01-dark);
+            }
+            ul {
+                li {
+                    color: var(--gray-01-dark);
+                }
+            }
+        }
         h3 {
+            color: #dfdfdf;
             font-size: 1.2rem;
         }
         ul {
             li {
+                color: #dfdfdf;
                 font-size: 0.8rem;
             }
         }
